@@ -19,7 +19,7 @@ public sealed class IntegrityService
         using var semaphore = new SemaphoreSlim(workerCount, workerCount);
         var channel = Channel.CreateUnbounded<string>(new UnboundedChannelOptions { SingleWriter = true, SingleReader = false });
 
-
+       
         //TODO 1
         var producer = Task.Run(async () =>
         {
@@ -106,7 +106,8 @@ public sealed class IntegrityService
     }
 
     // TODO 10
-    public void SaveLastPath(string jsonPath)
+    
+    public void SavelastPath(string jsonPath)
     {
         using var key = Registry.CurrentUser.CreateSubKey(RegistryKey, writable: true);
         key.SetValue("LastSnapshot", jsonPath, RegistryValueKind.String);
