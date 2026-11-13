@@ -1,10 +1,10 @@
 ﻿namespace IntegrityChecker.Models;
-using System.Collections.Generic;
+
+public sealed record FileHashRecord(string RelativePath, string Sha256);
 
 // TODO 3
 public sealed class Snapshot
 {
-    public string RootDirectory { get; set; } = "";
-    public DateTime CreatedUtc { get; set; }
+    public DateTime CreatedUtc { get; set; } = DateTime.UtcNow;
     public Dictionary<string, FileHashRecord> Files { get; set; } = new();
 }
