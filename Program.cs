@@ -1,4 +1,4 @@
-namespace IntegrityChecker;
+using IntegrityChecker;
 internal static class Program
 {
     private static async Task Main()
@@ -10,9 +10,7 @@ internal static class Program
         var service = new ProjectService();
         await service.RunAsync();
 
-        Console.WriteLine();
-        Console.WriteLine("Нажмите Enter для завершения.");
+        Console.WriteLine("\nНажмите Enter для завершения.");
         Console.ReadLine();
     }
 }
-
