@@ -20,6 +20,7 @@ public sealed class IntegrityService
         var channel = Channel.CreateUnbounded<string>(new UnboundedChannelOptions
         { SingleWriter = true, SingleReader = false });
 
+
         //TODO 1
         var producer = Task.Run(async () =>
         {
@@ -27,6 +28,7 @@ public sealed class IntegrityService
                 await channel.Writer.WriteAsync(file, token);
             channel.Writer.TryComplete();
         }, token);
+
 
         //TODO 2, 5, 7
         var workers = Enumerable.Range(0, workerCount).Select(_ => Task.Run(async () =>
