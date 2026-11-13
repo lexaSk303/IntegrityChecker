@@ -17,8 +17,7 @@ public sealed class IntegrityService
 
         //TODO 8
         using var semaphore = new SemaphoreSlim(workerCount, workerCount);
-        var channel = Channel.CreateUnbounded<string>(new UnboundedChannelOptions
-        { SingleWriter = true, SingleReader = false });
+        var channel = Channel.CreateUnbounded<string>(new UnboundedChannelOptions { SingleWriter = true, SingleReader = false });
 
 
         //TODO 1
