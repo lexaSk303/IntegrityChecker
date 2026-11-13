@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace IntegrityChecker.Models;
 
-namespace IntegrityChecker.Models
-{
-    internal class FileHashRecord
-    {
-    }
-}
+// TODO 1, 2
+public sealed record FileHashRecord(
+    string RelativePath,
+    string Sha256,
+    long Size,
+    DateTime LastWriteUtc);

@@ -1,5 +1,4 @@
-namespace Variant06;
-
+namespace IntegrityChecker;
 internal static class Program
 {
     private static async Task Main()
@@ -17,25 +16,3 @@ internal static class Program
     }
 }
 
-public sealed class ProjectService
-{
-    public async Task RunAsync()
-    {
-        // TODO: перенесите предметную логику в отдельные методы и классы.
-        // TODO: не размещайте весь проект в Main.
-        // TODO 1: Получить список файлов в каталоге.
-        // TODO 2: Вычислить SHA256 каждого файла.
-        // TODO 3: Сохранить контрольные суммы в JSON.
-        // TODO 4: Сравнить текущие хеши с предыдущим снимком.
-        // TODO 5: Реализовать параллельное вычисление хешей.
-        // TODO 6: Сравнить LINQ и PLINQ по времени и корректности.
-        // TODO 7: Корректно закрывать файловые потоки.
-
-        // TODO 8: Добавить Channel и ограниченное число worker-ов.
-        // TODO 9: Вывести новые, изменённые и удалённые файлы.
-        // TODO 10: Сохранять путь последнего снимка в HKCU.
-
-        Console.WriteLine("Стартовый проект собран. Реализуйте задания варианта.");
-        await Task.CompletedTask;
-    }
-}
