@@ -32,7 +32,7 @@ public sealed class IntegrityService
         //TODO 2, 5, 7
         var workers = Enumerable.Range(0, workerCount).Select(_ => Task.Run(async () =>
         {
-            await foreach (var path in channel.Reader.ReadAllAsync(token))
+            await foreach(var path in channel.Reader.ReadAllAsync(token))
             {
                 await semaphore.WaitAsync(token);
                 try
